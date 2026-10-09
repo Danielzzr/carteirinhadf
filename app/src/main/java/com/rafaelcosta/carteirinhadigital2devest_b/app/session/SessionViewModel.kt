@@ -16,4 +16,10 @@ class SessionViewModel: ViewModel() {
     fun limparSession(){
         _usuarioLogado.value = null
     }
+
+    fun limparSessao(limpar: Nothing?.() -> Unit) {
+        val sessionTokenStore = null
+        sessionTokenStore.limpar()
+        _usuarioLogado.value = null
+    }
 }

@@ -1,6 +1,7 @@
 package com.rafaelcosta.carteirinhadigital2devest_b.feature.login.data.repository
 
 import com.rafaelcosta.carteirinhadigital2devest_b.feature.login.domain.model.UsuarioLogado
+import com.rafaelcosta.carteirinhadigital2devest_b.feature.login.domain.repository.LoginRepository
 import kotlinx.coroutines.delay
 
 class FakeLoginRepositoryImpl : LoginRepository {
@@ -15,7 +16,7 @@ class FakeLoginRepositoryImpl : LoginRepository {
                     nome = "Rafael Costa",
                     curso = "Desenvolvimento de Sistema",
                     turma = "2DEVEST-B",
-                    token = "token-fake-para-aula"
+                    token = "token-fake-para-aula",
                 )
             )
         }else{

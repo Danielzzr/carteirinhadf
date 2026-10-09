@@ -3,6 +3,7 @@ import com.rafaelcosta.carteirinhadigital2devest_b.feature.login.data.remote.dto
 import com.rafaelcosta.carteirinhadigital2devest_b.feature.login.data.remote.dto.LoginRequestDto
 import com.rafaelcosta.carteirinhadigital2devest_b.feature.login.data.remote.service.AuthApi
 import com.rafaelcosta.carteirinhadigital2devest_b.feature.login.domain.model.UsuarioLogado
+import com.rafaelcosta.carteirinhadigital2devest_b.feature.login.domain.repository.LoginRepository
 import kotlinx.serialization.json.Json
 import retrofit2.HttpException
 import java.io.IOException
@@ -19,7 +20,7 @@ class ApiLoginRepositoryImpl(
                 nome = response.nome,
                 curso = response.curso,
                 turma = response.turma,
-                token = response.token
+                token = response.token,
             )
         }.recoverCatching { throwable ->
             throw mapToDomainError(throwable)

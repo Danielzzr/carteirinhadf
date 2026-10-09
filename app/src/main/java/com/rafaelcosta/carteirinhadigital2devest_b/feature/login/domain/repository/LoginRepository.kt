@@ -1,4 +1,4 @@
-package com.rafaelcosta.carteirinhadigital2devest_b.feature.login.data.repository
+package com.rafaelcosta.carteirinhadigital2devest_b.feature.login.domain.repository
 
 import com.rafaelcosta.carteirinhadigital2devest_b.feature.login.domain.model.UsuarioLogado
 

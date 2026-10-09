@@ -42,14 +42,19 @@ fun PerfilAluno(
                 )
         )
         InfoAluno(
-            label = "Nome",
-            value = nome
+            label = "Matrícula",
+            value = matricula,
+            fontSizeValue = 22.sp,
+            fontWeightValue =
+                FontWeight.SemiBold
         )
+
         InfoAluno(
             label = "Curso",
             value = curso,
-            fontSizeValue = 25.sp,
-            fontWeightValue = FontWeight.Normal
+            fontSizeValue = 22.sp,
+            fontWeightValue =
+                FontWeight.Normal
         )
     }
 }

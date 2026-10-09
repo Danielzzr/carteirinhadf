@@ -2,9 +2,7 @@ package com.rafaelcosta.carteirinhadigital2devest_b.feature.login.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.rafaelcosta.carteirinhadigital2devest_b.feature.login.data.repository.FakeLoginRepositoryImpl
-import com.rafaelcosta.carteirinhadigital2devest_b.feature.login.data.repository.LoginRepository
-import com.rafaelcosta.carteirinhadigital2devest_b.feature.login.data.repository.LoginRepositoryProvider
+import com.rafaelcosta.carteirinhadigital2devest_b.feature.login.domain.repository.LoginRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
