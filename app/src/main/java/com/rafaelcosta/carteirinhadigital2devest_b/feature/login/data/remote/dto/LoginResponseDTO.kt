@@ -9,4 +9,7 @@ data class LoginResponseDto(
     val curso: String,
     val turma: String,
     val token: String
-)
+) {
+    val perfil: String
+    val matricula: String
+}

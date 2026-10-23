@@ -1,14 +1,15 @@
 package com.rafaelcosta.carteirinhadigital2devest_b.app.di
 
+
+import com.rafaelcosta.carteirinhadigital2devest.feature.aluno.unidadescurriculares.data.remote.service.UnidadeCurricularApi
+import com.rafaelcosta.carteirinhadigital2devest.feature.aluno.unidadescurriculares.data.repository.ApiUnidadeCurricularRepositoryImpl
+import com.rafaelcosta.carteirinhadigital2devest.feature.aluno.unidadescurriculares.domain.repository.UnidadeCurricularRepository
+import com.rafaelcosta.carteirinhadigital2devest.feature.login.data.repository.ApiLoginRepositoryImpl
+import com.rafaelcosta.carteirinhadigital2devest.feature.login.data.repository.FakeAuthRepository
 import com.rafaelcosta.carteirinhadigital2devest_b.core.auth.SessionTokenStore
 import com.rafaelcosta.carteirinhadigital2devest_b.core.network.NetworkClient
 import com.rafaelcosta.carteirinhadigital2devest_b.feature.login.data.remote.service.AuthApi
-import com.rafaelcosta.carteirinhadigital2devest_b.feature.login.data.repository.ApiLoginRepositoryImpl
-import com.rafaelcosta.carteirinhadigital2devest_b.feature.login.data.repository.FakeLoginRepositoryImpl
 import com.rafaelcosta.carteirinhadigital2devest_b.feature.login.domain.repository.LoginRepository
-import com.rafaelcosta.carteirinhadigital2devest_b.feature.unidadecurriculares.data.remote.service.UnidadeCurricularApi
-import com.rafaelcosta.carteirinhadigital2devest_b.feature.unidadecurriculares.data.repository.ApiUnidadeCurricularRepositoryImpl
-import com.rafaelcosta.carteirinhadigital2devest_b.feature.unidadecurriculares.domain.repository.UnidadeCurricularRepository
 
 class DefaultAppContainer : AppContainer {
     override val sessionTokenStore : SessionTokenStore = SessionTokenStore()
@@ -30,10 +31,10 @@ class DefaultAppContainer : AppContainer {
     }
     override val loginRepository : LoginRepository by lazy {
         if (USE_FAKE_LOGIN_REPOSITORY ) {
-            FakeLoginRepositoryImpl()
+            FakeAuthRepository()
         } else {
             ApiLoginRepositoryImpl(
-                api =authApi
+                api = authApi
             )
         }
     }

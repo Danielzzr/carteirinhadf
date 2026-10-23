@@ -1,12 +1,11 @@
-package com.rafaelcosta.carteirinhadigital2devest_b.feature.login.domain.model
+package com.rafaelcosta.carteirinhadigital2devest.feature.login.domain.model
 
-data class UsuarioLogado (
+data class UsuarioLogado(
     val id: String,
     val nome: String,
+    val matricula: String,
+    val perfil: PerfilAcesso,
     val curso: String,
     val turma: String,
-    val token: String,
-    val matricula: String
-) {
-    val matricula: String
-}
+    val token: String
+)

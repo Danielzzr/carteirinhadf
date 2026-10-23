@@ -2,7 +2,7 @@ package com.rafaelcosta.carteirinhadigital2devest_b.core.network
 
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import com.rafaelcosta.carteirinhadigital2devest_b.core.auth.SessionTokenStore
-import com.rafaelcosta.carteirinhadigital2devest_b.feature.unidadecurriculares.data.remote.service.UnidadeCurricularApi
+import com.rafaelcosta.carteirinhadigital2devest_b.core.network.AuthInterceptor
 import kotlinx.serialization.json.Json
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
@@ -21,15 +21,14 @@ class NetworkClient(
             level = HttpLoggingInterceptor.Level.BODY
         }
     }
-
-    private val publicOkHttpClient: OkHttpClient by lazy {
+    private val publicOkHttpClient:OkHttpClient by lazy {
 
         OkHttpClient.Builder()
             .addInterceptor(
                 createLoggingInterceptor()
             ).build()
     }
-    private val authenticatedOkHttpClient: OkHttpClient by lazy {
+    private val authenticatedOkHttpClient:OkHttpClient by lazy {
         OkHttpClient.Builder()
             .addInterceptor(
                 AuthInterceptor(sessionTokenStore = sessionTokenStore)
@@ -49,13 +48,10 @@ class NetworkClient(
                 json.asConverterFactory("application/json".toMediaType())
             ).build()
     }
-
     fun <T : Any> createPublic(serviceClass: Class<T>): T {
         return createRetrofit(publicOkHttpClient).create(serviceClass)
     }
-
     fun <T : Any> createAuthenticated(serviceClass: Class<T>): T {
         return createRetrofit(authenticatedOkHttpClient).create(serviceClass)
     }
-
 }
