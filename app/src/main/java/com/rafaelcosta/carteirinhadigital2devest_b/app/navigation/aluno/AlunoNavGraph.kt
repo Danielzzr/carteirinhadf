@@ -14,12 +14,12 @@ import com.rafaelcosta.carteirinhadigital2devest.feature.aluno.home.presentation
 import com.rafaelcosta.carteirinhadigital2devest.feature.aluno.unidadescurriculares.presentation.UnidadeCurricularViewModel
 import com.rafaelcosta.carteirinhadigital2devest.feature.aluno.unidadescurriculares.presentation.factory.UnidadeCurricularViewModelFactory
 import com.rafaelcosta.carteirinhadigital2devest.feature.aluno.unidadescurriculares.presentation.screen.UnidadeCurricularScreen
-import com.rafaelcosta.carteirinhadigital2devest.feature.login.domain.model.UsuarioLogado
 import com.rafaelcosta.carteirinhadigital2devest_b.app.navigation.GraphRoutes
 import com.rafaelcosta.carteirinhadigital2devest_b.app.navigation.ProfileGuard
 import com.rafaelcosta.carteirinhadigital2devest_b.app.ui.AppShell
 import com.rafaelcosta.carteirinhadigital2devest_b.feature.aluno.unidadescurriculares.domain.repository.UnidadeCurricularRepository
 import com.rafaelcosta.carteirinhadigital2devest_b.feature.login.domain.model.PerfilAcesso
+import com.rafaelcosta.carteirinhadigital2devest_b.feature.login.domain.model.UsuarioLogado
 import kotlinx.coroutines.flow.StateFlow
 
 fun NavGraphBuilder.alunoNavGraph(

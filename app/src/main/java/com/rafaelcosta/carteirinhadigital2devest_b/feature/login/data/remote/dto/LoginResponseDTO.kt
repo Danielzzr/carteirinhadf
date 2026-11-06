@@ -8,8 +8,12 @@ data class LoginResponseDto(
     val nome: String,
     val curso: String,
     val turma: String,
-    val token: String
+    val token: String,
+    val matricula: String
 ) {
     val perfil: String
-    val matricula: String
+        get() {
+            TODO()
+        }
+
 }

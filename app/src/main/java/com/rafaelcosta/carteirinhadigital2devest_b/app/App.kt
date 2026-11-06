@@ -30,5 +30,3 @@ fun App(container: AppContainer) {
         )
     }
 }
-
-

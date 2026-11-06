@@ -2,16 +2,18 @@ package com.rafaelcosta.carteirinhadigital2devest_b.app.di
 
 
 import com.rafaelcosta.carteirinhadigital2devest.feature.aluno.unidadescurriculares.data.remote.service.UnidadeCurricularApi
-import com.rafaelcosta.carteirinhadigital2devest.feature.aluno.unidadescurriculares.data.repository.ApiUnidadeCurricularRepositoryImpl
-import com.rafaelcosta.carteirinhadigital2devest.feature.aluno.unidadescurriculares.domain.repository.UnidadeCurricularRepository
-import com.rafaelcosta.carteirinhadigital2devest.feature.login.data.repository.ApiLoginRepositoryImpl
-import com.rafaelcosta.carteirinhadigital2devest.feature.login.data.repository.FakeAuthRepository
+
+
 import com.rafaelcosta.carteirinhadigital2devest_b.core.auth.SessionTokenStore
 import com.rafaelcosta.carteirinhadigital2devest_b.core.network.NetworkClient
+import com.rafaelcosta.carteirinhadigital2devest_b.feature.aluno.unidadescurriculares.data.repository.ApiUnidadeCurricularRepositoryImpl
+import com.rafaelcosta.carteirinhadigital2devest_b.feature.aluno.unidadescurriculares.domain.repository.UnidadeCurricularRepository
 import com.rafaelcosta.carteirinhadigital2devest_b.feature.login.data.remote.service.AuthApi
+import com.rafaelcosta.carteirinhadigital2devest_b.feature.login.data.repository.ApiLoginRepositoryImpl
+import com.rafaelcosta.carteirinhadigital2devest_b.feature.login.data.repository.FakeAuthRepository
 import com.rafaelcosta.carteirinhadigital2devest_b.feature.login.domain.repository.LoginRepository
 
-class DefaultAppContainer : AppContainer {
+class DefaultAppContainer(override val authTokenStore: SessionTokenStore) : AppContainer {
     override val sessionTokenStore : SessionTokenStore = SessionTokenStore()
     private val networkClient =
         NetworkClient(

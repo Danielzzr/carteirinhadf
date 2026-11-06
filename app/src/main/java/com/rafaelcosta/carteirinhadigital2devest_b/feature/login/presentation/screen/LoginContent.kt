@@ -1,4 +1,4 @@
-package com.rafaelcosta.carteirinhadigital2devest.feature.login.presentation.screen
+package com.rafaelcosta.carteirinhadigital2devest_b.feature.login.presentation.screen
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Arrangement
@@ -22,14 +22,15 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.rafaelcosta.carteirinhadigital2devest.core.designsystem.theme.CarteirinhaDigital2DEVESTTheme
-import com.rafaelcosta.carteirinhadigital2devest.feature.login.presentation.LoginUiState
+import com.rafaelcosta.carteirinhadigital2devest.feature.aluno.home.presentation.screen.CarteirinhaDigital2DEVESTTheme
+
 import com.rafaelcosta.carteirinhadigital2devest_b.feature.login.presentation.LoginEvent
+import com.rafaelcosta.carteirinhadigital2devest_b.feature.login.presentation.LoginUIState
 
 @Composable
 fun LoginContent(
     modifier: Modifier = Modifier,
-    uiState: LoginUiState,
+    uiState: LoginUIState,
     onEvent:(LoginEvent)-> Unit
 ) {
     Column(
@@ -111,7 +112,7 @@ private fun LoginContentPreview() {
     CarteirinhaDigital2DEVESTTheme {
         LoginContent(
             modifier = Modifier.fillMaxSize(),
-            uiState = LoginUiState(
+            uiState = LoginUIState(
                 usuario = "aluno",
                 senha = "123"
             ),
@@ -126,7 +127,7 @@ private fun LoginContentErrorPreview() {
     CarteirinhaDigital2DEVESTTheme {
         LoginContent(
             modifier = Modifier.fillMaxSize(),
-            uiState = LoginUiState(
+            uiState = LoginUIState(
                 usuario = "aluno",
                 senha = "000",
                 errorMessage = "Login ou senha inválidos",

@@ -5,10 +5,11 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
-import com.rafaelcosta.carteirinhadigital2devest.feature.login.domain.model.UsuarioLogado
-import com.rafaelcosta.carteirinhadigital2devest.feature.login.presentation.LoginViewModel
+
 import com.rafaelcosta.carteirinhadigital2devest_b.app.navigation.GraphRoutes
+import com.rafaelcosta.carteirinhadigital2devest_b.feature.login.domain.model.UsuarioLogado
 import com.rafaelcosta.carteirinhadigital2devest_b.feature.login.domain.repository.LoginRepository
+import com.rafaelcosta.carteirinhadigital2devest_b.feature.login.presentation.LoginViewModel
 import com.rafaelcosta.carteirinhadigital2devest_b.feature.login.presentation.factory.LoginViewModelFactory
 import com.rafaelcosta.carteirinhadigital2devest_b.feature.login.presentation.screen.LoginScreen
 

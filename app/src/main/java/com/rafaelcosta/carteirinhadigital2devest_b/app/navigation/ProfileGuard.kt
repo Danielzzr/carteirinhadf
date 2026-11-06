@@ -4,8 +4,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.rafaelcosta.carteirinhadigital2devest.feature.login.domain.model.UsuarioLogado
 import com.rafaelcosta.carteirinhadigital2devest_b.feature.login.domain.model.PerfilAcesso
+import com.rafaelcosta.carteirinhadigital2devest_b.feature.login.domain.model.UsuarioLogado
 import kotlinx.coroutines.flow.StateFlow
 
 @Composable

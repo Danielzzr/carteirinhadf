@@ -1,10 +1,11 @@
-package com.rafaelcosta.carteirinhadigital2devest.feature.login.data.repository
+package com.rafaelcosta.carteirinhadigital2devest_b.feature.login.data.repository
 
-import com.rafaelcosta.carteirinhadigital2devest.feature.login.domain.model.PerfilAcesso
-import com.rafaelcosta.carteirinhadigital2devest.feature.login.domain.model.UsuarioLogado
+
 import com.rafaelcosta.carteirinhadigital2devest_b.feature.login.data.remote.dto.ErrorResponseDto
 import com.rafaelcosta.carteirinhadigital2devest_b.feature.login.data.remote.dto.LoginRequestDto
 import com.rafaelcosta.carteirinhadigital2devest_b.feature.login.data.remote.service.AuthApi
+import com.rafaelcosta.carteirinhadigital2devest_b.feature.login.domain.model.PerfilAcesso
+import com.rafaelcosta.carteirinhadigital2devest_b.feature.login.domain.model.UsuarioLogado
 import com.rafaelcosta.carteirinhadigital2devest_b.feature.login.domain.repository.LoginRepository
 import kotlinx.serialization.json.Json
 import retrofit2.HttpException
@@ -50,9 +51,6 @@ class ApiLoginRepositoryImpl(
         }
     }
 
-    fun login(loginRequestDto: LoginRequestDto) {
-        TODO("Not yet implemented")
-    }
 
     private fun mapToDomainError(
         throwable: Throwable

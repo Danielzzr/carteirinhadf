@@ -16,7 +16,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.rafaelcosta.carteirinhadigital2devest.R
+import com.rafaelcosta.carteirinhadigital2devest_b.R
 
 @Composable
 fun PerfilAluno(

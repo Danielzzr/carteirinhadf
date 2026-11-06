@@ -6,14 +6,12 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
-import com.rafaelcosta.carteirinhadigital2devest.app.navigation.GraphRoutes
-import com.rafaelcosta.carteirinhadigital2devest.app.navigation.ProfileGuard
-import com.rafaelcosta.carteirinhadigital2devest.app.navigation.professor.ProfessorRoutes
-
-import com.rafaelcosta.carteirinhadigital2devest.feature.login.domain.model.PerfilAcesso
-import com.rafaelcosta.carteirinhadigital2devest.feature.login.domain.model.UsuarioLogado
-import com.rafaelcosta.carteirinhadigital2devest.feature.professor.home.presentation.screen.HomeProfessorScreen
+import com.rafaelcosta.carteirinhadigital2devest_b.app.navigation.GraphRoutes
+import com.rafaelcosta.carteirinhadigital2devest_b.app.navigation.ProfileGuard
 import com.rafaelcosta.carteirinhadigital2devest_b.app.ui.AppShell
+import com.rafaelcosta.carteirinhadigital2devest_b.feature.login.domain.model.PerfilAcesso
+import com.rafaelcosta.carteirinhadigital2devest_b.feature.login.domain.model.UsuarioLogado
+import com.rafaelcosta.carteirinhadigital2devest_b.feature.professor.home.presentation.screen.HomeProfessorScreen
 import kotlinx.coroutines.flow.StateFlow
 
 fun NavGraphBuilder.professorNavGraph(

@@ -1,4 +1,4 @@
-package com.rafaelcosta.carteirinhadigital2devest.feature.login.domain.model
+package com.rafaelcosta.carteirinhadigital2devest_b.feature.login.domain.model
 
 data class UsuarioLogado(
     val id: String,

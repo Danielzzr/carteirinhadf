@@ -1,8 +1,8 @@
 package com.rafaelcosta.carteirinhadigital2devest_b.app.session
 
 import androidx.lifecycle.ViewModel
-import com.rafaelcosta.carteirinhadigital2devest.feature.login.domain.model.UsuarioLogado
 import com.rafaelcosta.carteirinhadigital2devest_b.core.auth.SessionTokenStore
+import com.rafaelcosta.carteirinhadigital2devest_b.feature.login.domain.model.UsuarioLogado
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow

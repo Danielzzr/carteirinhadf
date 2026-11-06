@@ -15,10 +15,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.rafaelcosta.carteirinhadigital2devest.core.designsystem.component.NavigationButton
-import com.rafaelcosta.carteirinhadigital2devest.core.designsystem.theme.CarteirinhaDigital2DEVESTTheme
-import com.rafaelcosta.carteirinhadigital2devest.feature.login.domain.model.PerfilAcesso
-import com.rafaelcosta.carteirinhadigital2devest.feature.login.domain.model.UsuarioLogado
+import com.rafaelcosta.carteirinhadigital2devest_b.core.designsystem.component.NavigationButton
+import com.rafaelcosta.carteirinhadigital2devest_b.feature.login.domain.model.PerfilAcesso
+import com.rafaelcosta.carteirinhadigital2devest_b.feature.login.domain.model.UsuarioLogado
+
 
 @Composable
 fun HomeAlunoScreen(
@@ -112,4 +112,9 @@ private fun HomeAlunoScreenPreview() {
             onUnidadesCurricularesClick = {}
         )
     }
+}
+
+@Composable
+fun CarteirinhaDigital2DEVESTTheme(content: @Composable () -> Unit) {
+    TODO("Not yet implemented")
 }

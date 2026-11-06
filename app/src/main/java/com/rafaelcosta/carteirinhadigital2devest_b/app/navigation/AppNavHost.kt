@@ -13,6 +13,7 @@ import com.rafaelcosta.carteirinhadigital2devest_b.app.navigation.auth.authNavGr
 import com.rafaelcosta.carteirinhadigital2devest_b.app.navigation.professor.professorNavGraph
 import com.rafaelcosta.carteirinhadigital2devest_b.app.session.SessionViewModel
 import com.rafaelcosta.carteirinhadigital2devest_b.app.session.SessionViewModelFactory
+import com.rafaelcosta.carteirinhadigital2devest_b.core.auth.SessionTokenStore
 
 @Composable
 fun AppNavHost(
@@ -24,7 +25,7 @@ fun AppNavHost(
 
     val sessionFactory = remember(container.sessionTokenStore) {
         SessionViewModelFactory(
-            sessionTokenStore = container.sessionTokenStore
+            sessionTokenStore = container.sessionTokenStore as SessionTokenStore
         )
     }
 
